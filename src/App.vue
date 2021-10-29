@@ -1,28 +1,88 @@
 <template>
-  <div id="nav">
+  <div id="app">
+    <div id="nav">
+      <router-link to="/leads">
+        <img class="navLogo" alt="EloGroup logo minimized" src="@/assets/logo_minimized.png">
+      </router-link>
+ 
+      <router-link to='/'> <button type="submit">REGISTRO</button>  </router-link>
+
+    </div>
+    <div class="appContainer">
+      <router-view/>
+    </div>
   </div>
-  <router-view/>
 </template>
 
+<script>
+export default {
+  name: "app",
+  data: () => {
+    return {
+      loginButtonInner: "Entrar"
+    }
+  }
+}
+</script>
+
 <style>
+:root {
+  --mainColor: rgb(20, 34, 43);
+  --containersBackground: white;
+  --darkerContrastColor: rgb(187, 187, 187); 
+
+  --errorColor: red;
+
+  --transitionTime: .15s;
+
+  --tableHeaderBackgorund: rgb(158, 158, 158);
+  --tableHeaderColor: var(--containersBackground);
+  --tableRowColorBackground: var(--containersBackground);
+  --tableRowColor: var(--mainColor);
+  --tableEvenBackground: rgb(230, 230, 230);
+}
+
+* {
+  margin: 0;
+  outline: none;
+  color: var(--mainColor);
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+#nav { 
+  position: relative; 
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  background: var(--mainColor);
+}
+  
+.navLogo {
+  margin: 10px;
+  height: 50px; 
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.loginBtn {
+  margin-right: 20px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.appContainer {
+  background: var(--containersBackground);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  border: solid 1px var(--mainColor);
+  padding: 15px;
 }
 </style>

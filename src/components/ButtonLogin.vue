@@ -1,6 +1,6 @@
 <template>
     <div class = "Button">
-        <button type="submit" v-if  = "tipoUsuario == true" >Registrar</button>
+        <button type="submit" v-if  = "tipoUsuario == true" >Login</button>
     </div>
         
 </template>
@@ -11,8 +11,11 @@ export default {
     data(){
     return {
         tipoUsuario: true
-} 
-}}
+}
+},
+    
+
+}
 </script>
 
 

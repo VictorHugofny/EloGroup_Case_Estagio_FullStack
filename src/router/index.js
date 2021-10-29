@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Login from '../views/Login.vue'
+import Registro from '../views/Registro.vue'
+import PainelLeads from '../views/PainelLeads.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Login',
-    component: Login
+    name: 'Registro',
+    component: Registro
+  },
+  {
+    path: '/leads',
+    name: 'PainelLeads',
+    component: PainelLeads
   },
 ]
 
