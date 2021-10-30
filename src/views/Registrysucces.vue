@@ -6,7 +6,6 @@
 
 <script>
 import SucessLogin from '@/components/SucessLogin.vue'
-import router from '@/router/'
 
 
 export default {
@@ -14,9 +13,6 @@ export default {
     SucessLogin,
   },
   methods:{
-      teste() {
-          router.push("PainelLeads");
-          console.log("teste")
-      }
+     
   }}
 </script>

@@ -6,23 +6,23 @@
         <td class = "input"><input type="checkbox" name="tipo" id="vazio"></td>
         <td></td>
     </tr>
-
     <tr class = "tabela-vazia">
-        <td> <input type="checkbox" name="tipo" id="RPA"> </td>
+        <td class = "input"> <input v-model = "oportunidade" type="checkbox" name="RPA" id="RPA"> </td>
         <td><h3> RPA </h3></td>
     </tr>
     <tr class = "tabela-vazia">
-        <td><input type="checkbox" name="tipo" id="Produto"></td>
+        <td class = "input"><input v-model = "oportunidade" type="checkbox" name="RPA" id="Produto"></td>
         <td><h3> Produto Digital </h3></td>
     </tr>
     <tr class = "tabela-vazia">
-        <td><input type="checkbox" name="tipo" id="Analytics"></td>
+        <td class = "input"><input v-model = "oportunidade" type="checkbox" name="RPA" id="Analytics"></td>
         <td><h3> Analytics </h3></td>
     </tr>
     <tr class = "tabela-vazia">
-        <td><input type="checkbox" name="tipo" id="BPM"></td>
+        <td class = "input"><input v-model = "oportunidade" type="checkbox" name="RPA" id="BPM"></td>
         <td><h3> BPM </h3></td>
     </tr>
+
    </table>
 
     </div>

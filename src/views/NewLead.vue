@@ -17,7 +17,7 @@
 
          <div> 
             <Checkbox class="check"/>
-            <SaveLead class = "buttonsave"/>
+            <SaveLead class = "buttonsave" @click="newLead"/>
           </div>    
   </div>    
      
@@ -40,18 +40,17 @@ export default {
   },
   methods:{
       newLead: function(){
-          alert('botão testeee')
-          router.push("NewLead");
+          router.push("LeadCreate");
       }
   },
 
    data(){
     return {
-        nome : 'teste',
+        nome : '',
         telefone : '',
         email : ''
     }
-},
+}, 
 }
 </script>
 
@@ -61,7 +60,7 @@ export default {
     
 }
 .logo p{
-    margin-left: 70px;
+    margin-left: 30px;
 }
 .InputLead{
     display: flex;
@@ -72,9 +71,12 @@ export default {
 }
 
 .check{
-    margin-left: 110px;
+    margin-left: 80px;
 }
 .buttonsave{
-    margin-left: 100px;
+    margin-left: 80px;
+}
+input{
+    width: 160px
 }
 </style>

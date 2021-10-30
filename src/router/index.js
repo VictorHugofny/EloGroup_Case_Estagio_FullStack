@@ -3,12 +3,18 @@ import Registro from '../views/Registro.vue'
 import PainelLeads from '../views/PainelLeads.vue'
 import Registrysucces from '../views/Registrysucces.vue'
 import NewLead from '../views/NewLead.vue'
+import LeadCreate from '../views/LeadCreate.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Registro',
     component: Registro
+  },
+  {
+    path: '/LeadCreate',
+    name: 'LeadCreate',
+    component: LeadCreate
   },
   {
     path: '/leads',

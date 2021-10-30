@@ -8,23 +8,20 @@
         <td>Reunião Agendada</td>
     </tr>
 
-     <tr class = "tabela-vazia"> 
-        <td v-for="lead in leads" :key="lead.nome">
-          <p >{{lead.nome}}</p>
+     <tr v-for="lead in leads" :key="lead.nome" class = "tabela-vazia"> 
+        <td v-if = "lead.estado == 1">
+          <p>{{lead.nome}}</p>
+          <p>{{lead.estado}}</p>
+        </td>
+        <td v-if = "lead.estado == 2" >
+          <p>{{lead.nome}}</p>
+           <p>{{lead.estado}}</p>
+        </td>
+        <td v-if = "lead.estado == 3">
+          <p>{{lead.nome}}</p>
+          <p>{{lead.estado}}</p>
         </td>
       </tr>
-
-    <tr class = "tabela-vazia">
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr class = "tabela-vazia">
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
    </table>
 </div>
 </template>
@@ -46,11 +43,11 @@ export default {
             estado : 1
         },
         {
-            nome : '',
+            nome : 'teste',
             estado : 2
         },
         {
-            nome : '',
+            nome : 'hugo',
             estado : 3
         }   
     ],
