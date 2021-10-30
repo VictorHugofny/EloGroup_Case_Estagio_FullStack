@@ -8,7 +8,26 @@
         <td>Reunião Agendada</td>
     </tr>
 
+     <tr class = "tabela-vazia"> 
+        <td v-for="lead in leads" :key="lead.nome">
+          <p >{{lead.nome}}</p>
+        </td>
+      </tr>
+
+    <tr class = "tabela-vazia">
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr class = "tabela-vazia">
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
    </table>
+
+   <button type="submit"> testando </button>
 
     </div>
 </template>
@@ -16,20 +35,34 @@
 
 <script>
 
-let objeto = {
-    leads: [
-        {
-            nome : 'seila',
-            estado : 1
-        }
-    ]
-}
+
 
 export default {
-    setup() {
+
+
+    data(){
         
+    return{
+        leads: [ //base de dados
+        {
+            nome : 'teste',
+            estado : 1
+        },
+        {
+            nome : 'hugo',
+            estado : 2
+        },
+        {
+            nome : 'seila',
+            estado : 3
+        }   
+    ],
+        lead: [ ], //vai ser adiciona aqui pelo for
+}       
     },
-}
+ 
+    }
+ 
 </script>
 
 
