@@ -7,28 +7,32 @@
         <td>Dados Confirmados</td>
         <td>Reunião Agendada</td>
     </tr>
-    <tr class = "tabela-vazia">
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
 
-    <tr class = "tabela-vazia white">
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-
-    <tr class = "tabela-vazia">
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
    </table>
 
     </div>
 </template>
+
+
+<script>
+
+let objeto = {
+    leads: [
+        {
+            nome : 'seila',
+            estado : 1
+        }
+    ]
+}
+
+export default {
+    setup() {
+        
+    },
+}
+</script>
+
+
 
 <style>
 .tabela{

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Registro from '../views/Registro.vue'
 import PainelLeads from '../views/PainelLeads.vue'
-
+import Registrysucces from '../views/Registrysucces.vue'
 const routes = [
   {
     path: '/',
@@ -12,6 +12,11 @@ const routes = [
     path: '/leads',
     name: 'PainelLeads',
     component: PainelLeads
+  },
+  {
+    path: '/Registrysucces',
+    name: 'Registrysucces',
+    component: Registrysucces
   },
 ]
 

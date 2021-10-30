@@ -1,7 +1,7 @@
 <template>
     <div class = "login"> 
     <FailedLogin v-show="fail == true"/>
-    <SucessLogin v-show="Sucess == true"/>
+    
     <Header/>
 
     <div class="floatTextInput">
@@ -22,9 +22,9 @@
 <script>
 // @ is an alias to /src
 import Header from '@/components/Header.vue'
+import router from '@/router/'
 import Button from '@/components/Button.vue'
 import FailedLogin from '@/components/FailedLogin.vue'
-import SucessLogin from '@/components/SucessLogin.vue'
 
 export default {
   name: 'Login',
@@ -32,7 +32,6 @@ export default {
     Header,
     Button,
     FailedLogin,
-    SucessLogin
   },
 
    data(){
@@ -73,12 +72,11 @@ methods:{
           console.log("criado")
                 localStorage.id = this.id;
                 localStorage.senha = this.senha;
-                this.Sucess = true
                 this.fail = false
+                router.push("Registrysucces");
 
         }else{
         this.fail = true
-        this.Sucess = false
       }
       }
     }
