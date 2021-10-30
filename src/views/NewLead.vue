@@ -1,0 +1,80 @@
+<template>
+    <div class = 'logo'>
+    <Header/>
+    <p>Novo Lead</p>
+    </div>
+
+    
+<div class = "InputLead">
+    <div class="floatTextInput">
+        <span>Nome * </span>
+        <input v-model = "nome" />
+        <span>Telefone * </span>
+        <input v-model = "telefone" />
+        <span>Email * </span>
+        <input v-model = "email" />
+    </div>
+
+         <div> 
+            <Checkbox class="check"/>
+            <SaveLead class = "buttonsave"/>
+          </div>    
+  </div>    
+     
+     
+</template>
+
+<script>
+// @ is an alias to /src
+import Header from '@/components/Header.vue'
+import SaveLead from '@/components/SaveLead.vue'
+import router from '@/router/'
+import Checkbox from '@/components/Checkbox.vue'
+
+export default {
+  name: 'Login',
+  components: {
+    Header,
+    SaveLead,
+    Checkbox
+  },
+  methods:{
+      newLead: function(){
+          alert('botão testeee')
+          router.push("NewLead");
+      }
+  },
+
+   data(){
+    return {
+        nome : 'teste',
+        telefone : '',
+        email : ''
+    }
+},
+}
+</script>
+
+<style scoped>
+.logo{
+    display: flex;
+    
+}
+.logo p{
+    margin-left: 70px;
+}
+.InputLead{
+    display: flex;
+}
+
+.InputLead .floatTextInput{
+    margin-right: 0px;
+}
+
+.check{
+    margin-left: 110px;
+}
+.buttonsave{
+    margin-left: 100px;
+}
+</style>

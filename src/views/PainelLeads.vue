@@ -7,7 +7,7 @@
          <div><p> Painel de Leads </p></div>
         </div>
         <div>
-        <NewLeadBtn/>
+        <NewLeadBtn @click="newLead"/>
         <TabbleLeads/>
         </div>
     </div>
@@ -20,6 +20,7 @@
 import Header from '@/components/Header.vue'
 import NewLeadBtn from '@/components/NewLeadBtn.vue'
 import TabbleLeads from '@/components/TabbleLeads.vue'
+import router from '@/router/'
 
 export default {
   name: 'Login',
@@ -27,7 +28,12 @@ export default {
     Header,
     NewLeadBtn,
     TabbleLeads
-  } 
+  },
+  methods:{
+      newLead: function(){
+          router.push("NewLead");
+      }
+  }
 }
 </script>
 

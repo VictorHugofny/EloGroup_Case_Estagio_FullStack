@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .Header img{
     height: 50px;
 }

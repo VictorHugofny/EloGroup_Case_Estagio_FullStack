@@ -8,7 +8,6 @@
       :autocomplete="autocomplete"
       :senhaConfirmada = "senhaConfirmada"
       v-model = "id" />
-      <h1> {{id}} </h1>
   </div>
 </template>
 

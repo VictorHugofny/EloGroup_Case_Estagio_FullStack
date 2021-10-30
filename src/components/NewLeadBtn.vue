@@ -4,7 +4,7 @@
 </div>
 </template>
 
-<style>
+<style scoped>
 .NewLead button {
     background: rgb(92, 194, 224);
     border: 0px;

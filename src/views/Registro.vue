@@ -8,10 +8,9 @@
         <span>Usuário * </span>
         <input v-model = "id" />
         <span>Senha * </span>
-        <input v-model = "senha" />
+        <input type="password" v-model = "senha" />
         <span>Confirmação Password * </span>
-        <input v-model = "senhaConfirmada" />
-        <h1> {{id}} </h1>
+        <input type="password" v-model = "senhaConfirmada" />
     </div>
 
     <Button @click = "persist"/>

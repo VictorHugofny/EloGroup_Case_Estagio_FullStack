@@ -15,8 +15,7 @@ export default {
 }}
 </script>
 
-
-<style>
+<style scoped>
 .Button button{
     padding: 10px;
     margin-top: 20px;

@@ -26,10 +26,7 @@
         <td></td>
     </tr>
    </table>
-
-   <button type="submit"> testando </button>
-
-    </div>
+</div>
 </template>
 
 
@@ -45,15 +42,15 @@ export default {
     return{
         leads: [ //base de dados
         {
-            nome : 'teste',
+            nome : 'vazio',
             estado : 1
         },
         {
-            nome : 'hugo',
+            nome : '',
             estado : 2
         },
         {
-            nome : 'seila',
+            nome : '',
             estado : 3
         }   
     ],
@@ -67,7 +64,7 @@ export default {
 
 
 
-<style>
+<style scoped>
 .tabela{
     padding-top: 4px;   
     margin:0;
