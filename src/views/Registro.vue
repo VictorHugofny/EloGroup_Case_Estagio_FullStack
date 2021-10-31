@@ -92,7 +92,7 @@ mounted() {
 }
 </script>
 
-<style>
+<style scoped>
 
 .login {
   display: flex;

@@ -40,6 +40,10 @@ export default {
   },
   methods:{
       newLead: function(){
+          localStorage.nome = this.nome;
+          localStorage.telefone = this.telefone;
+          localStorage.email = this.email;
+          localStorage.position = 0
           router.push("LeadCreate");
       }
   },
@@ -50,7 +54,17 @@ export default {
         telefone : '',
         email : ''
     }
-}, 
+}, mounted() {
+    if (localStorage.nome) {
+      this.nome = localStorage.nome;
+    }
+    if (localStorage.telefone) {
+      this.telefone = localStorage.telefone;
+    }
+    if (localStorage.telefone) {
+      this.email = localStorage.email;
+    }
+  }
 }
 </script>
 

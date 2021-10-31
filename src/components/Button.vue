@@ -11,8 +11,9 @@ export default {
     data(){
     return {
         tipoUsuario: true
-} 
-}}
+    } 
+  }
+}
 </script>
 
 <style scoped>

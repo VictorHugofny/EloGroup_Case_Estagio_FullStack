@@ -9,17 +9,34 @@
     </tr>
 
      <tr v-for="lead in leads" :key="lead.nome" class = "tabela-vazia"> 
+        <td v-if = "lead.estado == 1" @click = "mover">
+          <p v-show = "position == 0">{{lead.nome}}</p>
+        </td>
         <td v-if = "lead.estado == 1">
-          <p>{{lead.nome}}</p>
-          <p>{{lead.estado}}</p>
+          <p v-show = "position == 1" @click = "mover">{{lead.nome}}</p>
+        </td>
+        <td v-if = "lead.estado == 1">
+          <p v-show = "position == 2">{{lead.nome}}</p>
+        </td>
+
+        <td v-if = "lead.estado == 2" >
+          <p></p>
         </td>
         <td v-if = "lead.estado == 2" >
-          <p>{{lead.nome}}</p>
-           <p>{{lead.estado}}</p>
+          <p></p>
+        </td>
+        <td v-if = "lead.estado == 2" >
+          <p></p>
+        </td>
+
+        <td v-if = "lead.estado == 3">
+          <p></p>
         </td>
         <td v-if = "lead.estado == 3">
-          <p>{{lead.nome}}</p>
-          <p>{{lead.estado}}</p>
+          <p></p>
+        </td>
+        <td v-if = "lead.estado == 3">
+          <p></p>
         </td>
       </tr>
    </table>
@@ -32,14 +49,37 @@
 
 
 export default {
+    mounted() {
+         this.position = localStorage.position;
+    },
+    methods:{
+        mover: function(){
+            if (this.position < 2){
+                localStorage.position++
+            }
+      
 
-
+            if (localStorage.position == 0){
+                localStorage.position = 0
+                this.position = 0
+   
+            }else if (localStorage.position == 1){
+                localStorage.position = 1
+                this.position = 1
+  
+            }
+            else if (localStorage.position == 2){
+                localStorage.position = 2
+                this.position = 2
+            } }
+    },
     data(){
         
     return{
+        position : localStorage.position,
         leads: [ //base de dados
         {
-            nome : 'vazio',
+            nome : localStorage.nome,
             estado : 1
         },
         {
@@ -66,6 +106,10 @@ export default {
     padding-top: 4px;   
     margin:0;
     padding:0;
+}
+*{
+    margin:0 ;
+    padding:0 ;
 }
 
 td{
