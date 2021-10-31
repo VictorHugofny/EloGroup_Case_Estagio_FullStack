@@ -1,25 +1,23 @@
 <template>
-    <div class = "tabela">
-    <table>
+<div class = "tabela">
+  <table>
     <tr class = "topo">
         <td>Cliente em Portencial</td>
         <td>Dados Confirmados</td>
         <td>Reunião Agendada</td>
     </tr>
 
-     <tr v-for="lead in leads" :key="lead.nome" class = "tabela-vazia"> 
-       <td @click = "mover" v-for='mostrar in lead.estado' :key='mostrar'>
+    <tr v-for="lead in leads" :key="lead.nome" class = "tabela-vazia"> 
+      <td @click = "mover" v-for='mostrar in lead.estado' :key='mostrar'>
         <p> {{mostrar != ''? lead.nome: ''}} </p>
-       </td>
+      </td>
     </tr>
-   </table>
+  </table>
 </div>
 </template>
 
-
 <script>
 import mover from '@/controllers/MoveLeads'
-
 
 export default {
   mounted() {
@@ -36,8 +34,6 @@ export default {
 }
  
 </script>
-
-
 
 <style scoped>
 .tabela{
@@ -69,6 +65,4 @@ td{
 table{
     border-collapse: collapse;
 }
-
-
 </style>

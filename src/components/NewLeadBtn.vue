@@ -1,6 +1,6 @@
 <template>
 <div class ="NewLead"> 
-    <button type="submit"> Novo Lead (+)</button>
+    <button type="submit">Novo Lead (+)</button>
 </div>
 </template>
 

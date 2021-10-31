@@ -1,40 +1,41 @@
 <template>
-    <div class = 'logo'>
+<div>
+  <div class = 'logo'>
     <Header/>
     <p>Novo Lead</p>
-    </div>
-
-    
-<div class = "InputLead">
+  </div>
+  <ErrorBox v-show = "fail" :text='BoxText' />
+  <div class = "InputLead">
     <div class="floatTextInput">
-        <span>Nome * </span>
-        <input v-model = "nome" />
-        <span>Telefone * </span>
-        <input v-model = "telefone" />
-        <span>Email * </span>
-        <input v-model = "email" />
+      <span>Nome *</span>
+      <input v-model = "nome"/>
+      <span>Telefone *</span>
+      <input v-model = "telefone"/>
+      <span>Email *</span>
+      <input v-model = "email"/>
     </div>
-         <div> 
-            <Checkbox class="check"/>
-            <SaveLead class = "buttonsave" @click="NewLeadBtn"/>
-          </div>    
+    <div> 
+      <Checkbox class="check"/>
+      <SaveLead class = "buttonsave" @click="NewLeadBtn"/>
+    </div>    
   </div>    
-     
+</div>     
 </template>
 
 <script>
-// @ is an alias to /src
 import Header from '@/components/Header.vue'
 import SaveLead from '@/components/SaveLead.vue'
 import Checkbox from '@/components/Checkbox.vue'
 import NewLeadBtn from '@/controllers/NewLead'
+import ErrorBox from '@/components/FailedLogin.vue'
 
 export default {
   name: 'Login',
   components: {
     Header,
     SaveLead,
-    Checkbox
+    Checkbox,
+    ErrorBox
   },
   methods:{
      NewLeadBtn
@@ -42,9 +43,11 @@ export default {
 
    data(){
     return {
+        fail: false,
         nome : '',
         telefone : '',
-        email : ''
+        email : '',
+        BoxText: 'Não foi possivel criar lead, revise os campos são obrigatorios'
     }
 }, mounted() {
     if (localStorage.nome) {

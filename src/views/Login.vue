@@ -16,11 +16,11 @@
     <router-link to="/">
     <Button :texto='textoRegistro'/>
     </router-link>
+
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import Login from '@/controllers/Login'
 import Header from '@/components/Header.vue'
 import Button from '@/components/Button.vue'
@@ -36,31 +36,15 @@ export default {
 
    data(){
     return {
-      textoRegistro: 'Registrar',
       BoxText: 'Usuario não existe ou Senha incorreta',
+      textoRegistro: 'Registrar',
       textologin: 'Login',
       fail : false,
       teste : false,
       Sucess: false,
-      checkRegex: false,
-      autocomplete: "on",
       id:'',
       senha: '',
       senhaConfirmada:'',
-      inputUserText: "Usuário *",
-      inputUserId: "loginUserInput",
-
-      inputPassword: "Password *",
-      inputPasswordId: "loginPassword",
-      inputPasswordIdType: "password",
-
-      inputConfirmPassword: "Confirmação Password *",
-      inputConfirmPasswordId: "loginConfirmPassword",
-      inputConfirmPasswordType: "password",
-
-      confirmButtonText: "Registrar",
-
-      loginButtonText: "Login"
     }
 },
 

@@ -5,11 +5,9 @@
 </template>
 
 <script>
-
 import LeadCreatebtn from '@/components/LeadCreatebtn.vue'
 
 export default {
-
   components: {
     LeadCreatebtn
   }

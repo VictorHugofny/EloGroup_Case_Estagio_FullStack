@@ -7,13 +7,12 @@
 export default {
     props:{
         text: {
-        type: String,
-        default: () => "Botão"
+            type: String,
+            default: () => "Botão"
         }
     }   
 }
 </script>
-
 
 <style scoped>
 button{

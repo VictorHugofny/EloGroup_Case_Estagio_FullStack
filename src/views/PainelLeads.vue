@@ -3,10 +3,14 @@
 <div class = "Leads">
     <div class = "painelLeads">
         <div class = "topoPainel">
-         <div><Header/></div>
-         <div><p> Painel de Leads </p></div>
+            <div>
+                <Header/>
+            </div>
+            <div>
+                <p> Painel de Leads </p>
+            </div>
         </div>
-        <div>
+    <div>
 
     <router-link to="/NewLead">
       <NewLeadBtn/>
@@ -17,7 +21,6 @@
     </div>
 </div>
 </template>
-
 
 <script>
 // @ is an alias to /src

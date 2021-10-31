@@ -7,11 +7,11 @@
 <script>
 import SucessLogin from '@/components/SucessLogin.vue'
 
-
 export default {
   components: {
     SucessLogin,
-  },data(){
+  },
+  data(){
     return{
       texto:'Registro feito com sucesso'
     }

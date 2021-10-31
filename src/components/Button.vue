@@ -2,16 +2,15 @@
     <div class = "Button">
         <button  type="submit" v-if  = "tipoUsuario == true" >{{ texto }}</button>
     </div>
-        
 </template>
 
 <script>
 
 export default {
     data(){
-    return {
-        tipoUsuario: true
-    } 
+        return {
+            tipoUsuario: true
+        } 
   },
     props:{
     texto: {

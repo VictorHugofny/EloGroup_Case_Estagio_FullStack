@@ -1,36 +1,38 @@
 <template>
-    <div class = "tabela">
-    {{oportunidade}}
+<div class = "tabela">
     <table>
-    <tr class = "tabela-vazia">
-        <td class = "input">
-            <input class = "markallControler" type="checkbox" id="vazio"  @click = "markall"></td>
-        <td></td>
-    </tr>
-    <tr class = "tabela-vazia">
-        <td class = "input"> 
-            <input class= "markall" type="checkbox" id="RPA"> </td>
-        <td><h3> RPA </h3></td>
-    </tr>
-    <tr class = "tabela-vazia">
-        <td class = "input">
-            <input class= "markall" type="checkbox"  id="Produto"></td>
-        <td><h3> Produto Digital </h3></td>
-    </tr>
-    <tr class = "tabela-vazia">
-        <td class = "input">
-            <input class= "markall" type="checkbox" id="Analytics"></td>
-        <td><h3> Analytics </h3></td>
-    </tr>
-    <tr class = "tabela-vazia">
-        <td class = "input">
-            <input class= "markall" type="checkbox" id="BPM"></td>
-        <td><h3> BPM </h3></td>
-    </tr>
-
-   </table>
-
-    </div>
+        <tr class = "tabela-vazia">
+            <td class = "input">
+                <input class = "markallControler" type="checkbox" id="vazio"  @click = "markall">
+            </td>
+            <td></td>
+        </tr>
+        <tr class = "tabela-vazia">
+            <td class = "input"> 
+                <input class= "markall" type="checkbox" id="RPA"> 
+            </td>
+            <td><h3> RPA </h3></td>
+        </tr>
+        <tr class = "tabela-vazia">
+            <td class = "input">
+                <input class= "markall" type="checkbox"  id="Produto">
+            </td>
+            <td><h3> Produto Digital </h3></td>
+        </tr>
+        <tr class = "tabela-vazia">
+            <td class = "input">
+                <input class= "markall" type="checkbox" id="Analytics">
+            </td>
+            <td><h3> Analytics </h3></td>
+        </tr>
+        <tr class = "tabela-vazia">
+            <td class = "input">
+                <input class= "markall" type="checkbox" id="BPM">
+            </td>
+            <td><h3> BPM </h3></td>
+        </tr>
+    </table>
+</div>
 </template>
 
 <script>
@@ -47,9 +49,6 @@ export default {
     }
 }
 </script>
-
-
-
 
 <style scoped>
 
@@ -83,6 +82,5 @@ td{
 table{
     border-collapse: collapse;
 }
-
 </style>
 

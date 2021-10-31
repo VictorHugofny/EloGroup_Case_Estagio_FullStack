@@ -43,25 +43,9 @@ export default {
       BoxText: 'Usuario ja existe ou Senha não esta formatada corretamente',
       fail : false,
       Sucess: false,
-      checkRegex: false,
-      autocomplete: "on",
       id:'',
       senha: '',
       senhaConfirmada:'',
-      inputUserText: "Usuário *",
-      inputUserId: "loginUserInput",
-
-      inputPassword: "Password *",
-      inputPasswordId: "loginPassword",
-      inputPasswordIdType: "password",
-
-      inputConfirmPassword: "Confirmação Password *",
-      inputConfirmPasswordId: "loginConfirmPassword",
-      inputConfirmPasswordType: "password",
-
-      confirmButtonText: "Registrar",
-
-      loginButtonText: "Login"
     }
 },
 
