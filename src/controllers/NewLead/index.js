@@ -8,9 +8,9 @@ export default function(){
         pelomenosUm = pelomenosUm || elemento.checked 
     })
 
-    let canLogin = this.nome && this.telefone && this.email && pelomenosUm
+    let podeCriar = this.nome && this.telefone && this.email && pelomenosUm
     
-    if(canLogin){       
+    if(podeCriar){       
         let lead = {
             nome: this.nome,
             telefone: this.telefone,

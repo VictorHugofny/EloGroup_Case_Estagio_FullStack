@@ -18,10 +18,12 @@ export default function (){
         router.push("Loginsucces");
       }
       else{
+        this.BoxText = "Senha incorreta"
         this.fail = true
       }
     }
     else{
+      this.BoxText = "Usuario não existe"
       this.fail = true
     }
   }
