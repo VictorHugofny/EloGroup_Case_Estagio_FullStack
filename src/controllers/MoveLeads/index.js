@@ -1,22 +1,39 @@
 
-export default function(){
-    if (this.position < 2){
-        localStorage.position++
+export default function(event){
+    let alvo = event.target
+    let leadSelecionada = alvo.nodeName == 'P' ? alvo : alvo.getElementsByTagName('p')[0]
+    
+    if(!leadSelecionada.innerHTML){
+        return
     }
+    
+    console.log(alvo)
+    
+    let lead = window.usuarioLogado.leads.find(ld => ld.nome == leadSelecionada.innerHTML)
+    console.log(lead)
 
+    let estados = [
+    ['1', '', ''],
+    ['', '1', ''],
+    ['', '', '1'] ]
 
-    if (localStorage.position == 0){
-        localStorage.position = 0
-        this.position = 0
+    if (lead.estadoNumero < 3)
+    lead.estadoNumero++
 
-    }else if (localStorage.position == 1){
-        localStorage.position = 1
-        this.position = 1
+    lead.estado = estados[lead.estadoNumero]
 
-    }
-    else if (localStorage.position == 2){
-        localStorage.position = 2
-        this.position = 2
-    } 
+    let bancoDeDados = JSON.parse(localStorage.bancoDeDados);
+
+    let usuario = bancoDeDados.usuarios.find(user => user.nome == window.usuarioLogado.nome);
+    usuario.leads = window.usuarioLogado.leads
+    
+    localStorage.bancoDeDados = JSON.stringify(bancoDeDados)
+
+    let tr = leadSelecionada.parentNode.parentNode
+    console.log(tr)
+    
+    if (lead.estadoNumero < 3) {
+    let proximaPosicao = tr.children[lead.estadoNumero].getElementsByTagName('p')[0]
+    proximaPosicao.innerHTML = leadSelecionada.innerHTML
+    leadSelecionada.innerHTML = ''}
 }
-

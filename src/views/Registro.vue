@@ -1,6 +1,6 @@
 <template>
     <div class = "login"> 
-    <FailedLogin v-show="fail == true"/>
+    <FailedLogin v-show="fail"/>
     
     <Header/>
 
@@ -60,15 +60,18 @@ export default {
 },
 
 methods:{
-    BtnRegister
+    BtnRegister,
 },
 mounted() {
+
     if (localStorage.id) {
       this.id = localStorage.id;
     }
     if (localStorage.senha) {
       this.senha = localStorage.senha;
     }
+    this.id = '',
+    this.senha = ''
   },
   
 }
