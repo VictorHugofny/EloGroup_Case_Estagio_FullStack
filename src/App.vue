@@ -5,8 +5,6 @@
         <img class="navLogo" alt="EloGroup logo minimized" src="@/assets/logo_minimized.png">
       </router-link>
  
-      <router-link to='/'> <button type="submit">REGISTRO</button>  </router-link>
-
     </div>
     <div class="appContainer">
       <router-view/>

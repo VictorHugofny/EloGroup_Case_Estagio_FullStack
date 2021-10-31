@@ -1,4 +1,5 @@
 import router from '@/router/'
+import BD from '@/controllers/Localstorage/'
 
 export default function(){
     let checkboxArray = Array.from(document.querySelectorAll('.markall'))
@@ -28,12 +29,12 @@ export default function(){
         })
 
         window.usuarioLogado.leads.push(lead)
-        let bancoDeDados = JSON.parse(localStorage.bancoDeDados);
+        let bancoDeDados = BD.pegarBD()
 
         let usuario = bancoDeDados.usuarios.find(user => user.nome == window.usuarioLogado.nome);
 
         usuario.leads = window.usuarioLogado.leads
-        localStorage.bancoDeDados = JSON.stringify(bancoDeDados)
+        BD.salvarBD(bancoDeDados)
         router.push("LeadCreate");
     }
     else{

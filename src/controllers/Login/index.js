@@ -1,15 +1,11 @@
 import router from '@/router/'
+import BD from '@/controllers/Localstorage/'
 
 export default function (){
   if (this.id){
-    let bancoDeDados
     
-    if(!localStorage.bancoDeDados){
-      localStorage.bancoDeDados = JSON.stringify({
-        usuarios : []
-      })           
-    }
-    bancoDeDados = JSON.parse(localStorage.bancoDeDados);
+    let bancoDeDados = BD.pegarBD()
+    
     let usuario = bancoDeDados.usuarios.find(user => user.nome == this.id);
     
     if(usuario){

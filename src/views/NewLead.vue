@@ -49,16 +49,6 @@ export default {
         email : '',
         BoxText: 'Não foi possivel criar lead, revise os campos são obrigatorios'
     }
-}, mounted() {
-    if (localStorage.nome) {
-      this.nome = localStorage.nome;
-    }
-    if (localStorage.telefone) {
-      this.telefone = localStorage.telefone;
-    }
-    if (localStorage.telefone) {
-      this.email = localStorage.email;
-    }
   }
 }
 </script>

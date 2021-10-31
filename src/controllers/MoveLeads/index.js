@@ -1,3 +1,4 @@
+import BD from '@/controllers/Localstorage/'
 
 export default function(event){
     let alvo = event.target
@@ -19,12 +20,12 @@ export default function(event){
     
     lead.estado = estados[lead.estadoNumero]
 
-    let bancoDeDados = JSON.parse(localStorage.bancoDeDados);
+    let bancoDeDados = BD.pegarBD()
 
     let usuario = bancoDeDados.usuarios.find(user => user.nome == window.usuarioLogado.nome);
     usuario.leads = window.usuarioLogado.leads
     
-    localStorage.bancoDeDados = JSON.stringify(bancoDeDados)
+    BD.salvarBD(bancoDeDados)
 
     let tr = leadSelecionada.parentNode.parentNode
     

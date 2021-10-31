@@ -1,4 +1,5 @@
 import router from '@/router/'
+import BD from '@/controllers/Localstorage/'
 
 export default function (){    
   let checkRegex = this.senha.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/) == undefined;
@@ -6,14 +7,9 @@ export default function (){
 
   if (this.id){
     if(checkEqual && !checkRegex ){
-      let bancoDeDados
       
-      if(!localStorage.bancoDeDados){
-        localStorage.bancoDeDados = JSON.stringify({
-          usuarios : []
-        })           
-      }
-      bancoDeDados = JSON.parse(localStorage.bancoDeDados);
+      let bancoDeDados = BD.pegarBD()
+      
       let usuario = bancoDeDados.usuarios.find(user => user.nome == this.id);
       
       //logica para registro
@@ -27,7 +23,7 @@ export default function (){
           leads: [] 
         }
         bancoDeDados.usuarios.push(userObj)
-        localStorage.bancoDeDados = JSON.stringify(bancoDeDados)
+        BD.salvarBD(bancoDeDados)
         window.usuarioLogado = userObj
         router.push("Registrysucces");
       }

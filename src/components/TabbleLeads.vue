@@ -20,9 +20,6 @@
 import mover from '@/controllers/MoveLeads'
 
 export default {
-  mounted() {
-    this.estado = localStorage.estado;
-  },
   methods:{
       mover 
   },
