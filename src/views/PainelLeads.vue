@@ -63,7 +63,6 @@ body {
     padding-right: 30px;
 }
 
-
 .painelLeads{
     width: 600px;
     padding-top: 10px;

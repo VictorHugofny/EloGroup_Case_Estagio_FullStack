@@ -14,13 +14,11 @@
         <span>Email * </span>
         <input v-model = "email" />
     </div>
-
          <div> 
             <Checkbox class="check"/>
             <SaveLead class = "buttonsave" @click="NewLeadBtn"/>
           </div>    
   </div>    
-     
      
 </template>
 
@@ -30,7 +28,6 @@ import Header from '@/components/Header.vue'
 import SaveLead from '@/components/SaveLead.vue'
 import Checkbox from '@/components/Checkbox.vue'
 import NewLeadBtn from '@/controllers/NewLead'
-
 
 export default {
   name: 'Login',
