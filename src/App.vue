@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/leads">
+      <router-link to="/">
         <img class="navLogo" alt="EloGroup logo minimized" src="@/assets/logo_minimized.png">
       </router-link>
  
