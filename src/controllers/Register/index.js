@@ -4,12 +4,8 @@ export default function (){
   let checkRegex = this.senha.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/) == undefined;
   let checkEqual = (this.senha == this.senhaConfirmada)
 
-  if (this.id != "" || this.id != " "){
+  if (this.id){
     if(checkEqual && !checkRegex ){
-      console.log("criado")
-      localStorage.id = this.id;
-      localStorage.senha = this.senha;
-      
       let bancoDeDados
       
       if(!localStorage.bancoDeDados){
@@ -39,5 +35,8 @@ export default function (){
     else{
       this.fail = true
     }
+  }else{
+    this.BoxText = "Preencha os campos obrigatórios"
+    this.fail = true
   }
 }

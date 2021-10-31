@@ -1,7 +1,7 @@
 import router from '@/router/'
 
 export default function (){
-  if (this.id != "" || this.id != " "){
+  if (this.id){
     let bancoDeDados
     
     if(!localStorage.bancoDeDados){
@@ -26,5 +26,8 @@ export default function (){
       this.BoxText = "Usuario não existe"
       this.fail = true
     }
+  } else{
+    this.BoxText = "Preencha os campos obrigatórios"
+    this.fail = true
   }
 }
