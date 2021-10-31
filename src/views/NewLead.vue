@@ -69,6 +69,17 @@ export default {
 </script>
 
 <style scoped>
+
+.floatTextInput {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+input{
+    border: 1px solid black;
+    padding: 5px;
+    padding-right: 15px;
+}
 .logo{
     display: flex;
     
@@ -80,9 +91,6 @@ export default {
     display: flex;
 }
 
-.InputLead .floatTextInput{
-    margin-right: 0px;
-}
 
 .check{
     margin-left: 80px;
