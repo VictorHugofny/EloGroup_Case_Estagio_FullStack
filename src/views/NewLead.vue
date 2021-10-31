@@ -17,7 +17,7 @@
 
          <div> 
             <Checkbox class="check"/>
-            <SaveLead class = "buttonsave" @click="newLead"/>
+            <SaveLead class = "buttonsave" @click="NewLeadBtn"/>
           </div>    
   </div>    
      
@@ -28,8 +28,9 @@
 // @ is an alias to /src
 import Header from '@/components/Header.vue'
 import SaveLead from '@/components/SaveLead.vue'
-import router from '@/router/'
 import Checkbox from '@/components/Checkbox.vue'
+import NewLeadBtn from '@/controllers/NewLead'
+
 
 export default {
   name: 'Login',
@@ -39,13 +40,7 @@ export default {
     Checkbox
   },
   methods:{
-      newLead: function(){
-          localStorage.nome = this.nome;
-          localStorage.telefone = this.telefone;
-          localStorage.email = this.email;
-          localStorage.position = 0
-          router.push("LeadCreate");
-      }
+     NewLeadBtn
   },
 
    data(){

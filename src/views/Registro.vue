@@ -13,15 +13,15 @@
         <input type="password" v-model = "senhaConfirmada" />
     </div>
 
-    <Button @click = "persist"/>
+    <Button @click = "BtnRegister"/>
     
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import BtnRegister from '@/controllers/Register'
 import Header from '@/components/Header.vue'
-import router from '@/router/'
 import Button from '@/components/Button.vue'
 import FailedLogin from '@/components/FailedLogin.vue'
 
@@ -60,25 +60,7 @@ export default {
 },
 
 methods:{
-    persist() {
-       let checkRegex = this.senha.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/) == undefined;
-       let checkEqual = (this.senha == this.senhaConfirmada)
-       console.log("checkando a senha", checkRegex)
-
-
-      if (this.id != "" || this.id != " " || this.id.length < 1){
-        if(checkEqual && !checkRegex ){
-          console.log("criado")
-                localStorage.id = this.id;
-                localStorage.senha = this.senha;
-                this.fail = false
-                router.push("Registrysucces");
-
-        }else{
-        this.fail = true
-      }
-      }
-    }
+    BtnRegister
 },
 mounted() {
     if (localStorage.id) {

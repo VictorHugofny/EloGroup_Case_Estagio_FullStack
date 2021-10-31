@@ -12,7 +12,5 @@ export default {
   components: {
     SucessLogin,
   },
-  methods:{
-     
-  }}
+ }
 </script>

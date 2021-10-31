@@ -3,23 +3,23 @@
 
     <table>
     <tr class = "tabela-vazia">
-        <td class = "input"><input type="checkbox" name="tipo" id="vazio"></td>
+        <td class = "input markallControler"><input type="checkbox" name="tipo" id="vazio"  @click = "markall"></td>
         <td></td>
     </tr>
     <tr class = "tabela-vazia">
-        <td class = "input"> <input v-model = "oportunidade" type="checkbox" name="RPA" id="RPA"> </td>
+        <td class = "input markall"> <input v-model="oportunidade" type="checkbox" name="RPA" id="RPA"> </td>
         <td><h3> RPA </h3></td>
     </tr>
     <tr class = "tabela-vazia">
-        <td class = "input"><input v-model = "oportunidade" type="checkbox" name="RPA" id="Produto"></td>
+        <td class = "input markall"><input v-model="oportunidade" type="checkbox" name="RPA" id="Produto"></td>
         <td><h3> Produto Digital </h3></td>
     </tr>
     <tr class = "tabela-vazia">
-        <td class = "input"><input v-model = "oportunidade" type="checkbox" name="RPA" id="Analytics"></td>
+        <td class = "input markall"><input v-model="oportunidade" type="checkbox" name="RPA" id="Analytics"></td>
         <td><h3> Analytics </h3></td>
     </tr>
     <tr class = "tabela-vazia">
-        <td class = "input"><input v-model = "oportunidade" type="checkbox" name="RPA" id="BPM"></td>
+        <td class = "input markall"><input v-model="oportunidade" type="checkbox" name="RPA" id="BPM"></td>
         <td><h3> BPM </h3></td>
     </tr>
 
@@ -27,6 +27,27 @@
 
     </div>
 </template>
+
+<script>
+
+
+export default {
+    methods:{
+        markall: function(){
+            let markArray = document.querySelectorAll('.markall')
+            let markall = document.querySelector('.markallControler')
+    
+            Array.from(markArray).forEach((checkbox)=>{
+                checkbox.checked = markall.checked
+                
+            })
+        }
+    }
+}
+</script>
+
+
+
 
 <style scoped>
 
@@ -57,5 +78,9 @@ td{
     padding: 0px;
     margin: 0px;
 }
+table{
+    border-collapse: collapse;
+}
 
 </style>
+

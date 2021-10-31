@@ -45,7 +45,7 @@
 
 
 <script>
-
+import mover from '@/controllers/MoveLeads'
 
 
 export default {
@@ -53,25 +53,7 @@ export default {
          this.position = localStorage.position;
     },
     methods:{
-        mover: function(){
-            if (this.position < 2){
-                localStorage.position++
-            }
-      
-
-            if (localStorage.position == 0){
-                localStorage.position = 0
-                this.position = 0
-   
-            }else if (localStorage.position == 1){
-                localStorage.position = 1
-                this.position = 1
-  
-            }
-            else if (localStorage.position == 2){
-                localStorage.position = 2
-                this.position = 2
-            } }
+        mover 
     },
     data(){
         
@@ -128,8 +110,9 @@ td{
     background-color: rgb(228, 228, 228) ;
     font-size: 10px;
 }
-.white td{
-    background: white;
+table{
+    border-collapse: collapse;
 }
+
 
 </style>
