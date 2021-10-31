@@ -4,9 +4,20 @@ export default function(){
 
         let checkboxArray = Array.from(document.querySelectorAll('.markall'))
         console.log(checkboxArray)
-        let canLogin = this.nome && this.telefone && this.email 
+
+        let pelomenosUm = false
+        checkboxArray.forEach((elemento)=>{
+            pelomenosUm = pelomenosUm || elemento.checked 
+        })
+        console.log(pelomenosUm)
+        let canLogin = this.nome && this.telefone && this.email && pelomenosUm
         
-        if (canLogin){        
+        
+        if (canLogin){       
+            
+            
+
+            
           let lead = {
               nome: this.nome,
               telefone: this.telefone,
@@ -27,3 +38,6 @@ export default function(){
             alert("erro")
         }
     }
+
+
+
