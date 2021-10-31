@@ -1,7 +1,7 @@
 import router from '@/router/'
 
-export default function (){
-  let checkRegex = this.senha.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/) == undefined;
+export default function (){    
+  let checkRegex = this.senha.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/) == undefined;
   let checkEqual = (this.senha == this.senhaConfirmada)
 
   if (this.id != "" || this.id != " "){
