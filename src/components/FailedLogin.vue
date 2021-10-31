@@ -1,6 +1,17 @@
 <template>
-    <button>Erro ao criar um novo usuario, tente novamente</button>
+    <button>{{text}}</button>
 </template>
+
+<script>
+export default {
+    props: {
+        text: {
+            type: String
+        }
+    }
+}
+</script>
+
 
 <style scoped>
 button{

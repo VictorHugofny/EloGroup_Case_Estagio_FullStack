@@ -2,16 +2,11 @@ import router from '@/router/'
 
 export default function(){
 
-        if (this.nome == ""){
-            alert ("erro dps de nome")
-        }else if (this.telefone == "" ){
-            alert ("erro dps de telefone")
-        }else if (this.email == "" ){
-            alert ("erro dps de telefone")
-        }
-        else{
-          localStorage.position = 0
-          
+        let checkboxArray = Array.from(document.querySelectorAll('.markall'))
+        console.log(checkboxArray)
+        let canLogin = this.nome && this.telefone && this.email 
+        
+        if (canLogin){        
           let lead = {
               nome: this.nome,
               telefone: this.telefone,
@@ -26,4 +21,9 @@ export default function(){
           usuario.leads = window.usuarioLogado.leads
           localStorage.bancoDeDados = JSON.stringify(bancoDeDados)
           router.push("LeadCreate");
-        }}
+        }
+
+        else{
+            alert("erro")
+        }
+    }

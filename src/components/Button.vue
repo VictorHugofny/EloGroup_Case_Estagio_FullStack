@@ -1,6 +1,6 @@
 <template>
     <div class = "Button">
-        <button type="submit" v-if  = "tipoUsuario == true" >Registrar</button>
+        <button  type="submit" v-if  = "tipoUsuario == true" >{{ texto }}</button>
     </div>
         
 </template>
@@ -12,7 +12,13 @@ export default {
     return {
         tipoUsuario: true
     } 
-  }
+  },
+    props:{
+    texto: {
+      type: String,
+      default: () => "Botão"
+    }
+    }
 }
 </script>
 

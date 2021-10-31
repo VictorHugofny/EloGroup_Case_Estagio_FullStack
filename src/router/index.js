@@ -4,12 +4,19 @@ import PainelLeads from '../views/PainelLeads.vue'
 import Registrysucces from '../views/Registrysucces.vue'
 import NewLead from '../views/NewLead.vue'
 import LeadCreate from '../views/LeadCreate.vue'
+import Login from '../views/Login.vue'
+import Loginsucces from '../views/Loginsucces.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Registro',
     component: Registro
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
   },
   {
     path: '/LeadCreate',
@@ -25,6 +32,11 @@ const routes = [
     path: '/Registrysucces',
     name: 'Registrysucces',
     component: Registrysucces
+  },
+  {
+    path: '/Loginsucces',
+    name: 'Loginsucces',
+    component: Loginsucces
   },
   {
     path: '/NewLead',

@@ -1,7 +1,19 @@
 <template>
-    <h1>Usuario criado com sucesso</h1>
+    <h1>{{text}}</h1>
     <button>Clique aqui para continuar</button>
 </template>
+
+<script>
+export default {
+    props:{
+        text: {
+        type: String,
+        default: () => "Botão"
+        }
+    }   
+}
+</script>
+
 
 <style scoped>
 button{

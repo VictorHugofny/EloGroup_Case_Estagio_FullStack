@@ -13,7 +13,7 @@ export default {
     SucessLogin,
   },data(){
     return{
-      texto:'Registro feito com sucesso'
+      texto:'Login feito com sucesso'
     }
   }
  }

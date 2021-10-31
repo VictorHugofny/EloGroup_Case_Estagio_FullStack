@@ -1,29 +1,27 @@
 <template>
     <div class = "login"> 
+    
     <Header/>
-    <FailedLogin :text='BoxText' v-show="fail"/>
+    <FailedLogin :text='BoxText'  v-show="fail"/>
 
     <div class="floatTextInput">
         <span>Usuário * </span>
         <input v-model = "id" />
-        <span>Senha * </span>
+        <span>Senha* </span>
         <input type="password" v-model = "senha" />
-        <span>Confirmação Password * </span>
-        <input type="password" v-model = "senhaConfirmada" />
     </div>
 
-    <Button @click = "BtnRegister" :texto = 'textoRegistro'/>
-
-    <router-link to="/login">
-      <Button :texto = 'textologin'/>
-    </router-link>
+    <Button @click = 'Login' :texto='textologin'/>
     
+    <router-link to="/">
+    <Button :texto='textoRegistro'/>
+    </router-link>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import BtnRegister from '@/controllers/Register'
+import Login from '@/controllers/Login'
 import Header from '@/components/Header.vue'
 import Button from '@/components/Button.vue'
 import FailedLogin from '@/components/FailedLogin.vue'
@@ -39,9 +37,10 @@ export default {
    data(){
     return {
       textoRegistro: 'Registrar',
+      BoxText: 'Usuario não existe ou Senha incorreta',
       textologin: 'Login',
-      BoxText: 'Usuario ja existe ou Senha não esta formatada corretamente',
       fail : false,
+      teste : false,
       Sucess: false,
       checkRegex: false,
       autocomplete: "on",
@@ -66,7 +65,7 @@ export default {
 },
 
 methods:{
-    BtnRegister,
+    Login
 },
 mounted() {
     this.id = '',

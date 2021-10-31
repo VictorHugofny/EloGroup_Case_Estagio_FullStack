@@ -1,25 +1,30 @@
 <template>
     <div class = "tabela">
-
+    {{oportunidade}}
     <table>
     <tr class = "tabela-vazia">
-        <td class = "input markallControler"><input type="checkbox" name="tipo" id="vazio"  @click = "markall"></td>
+        <td class = "input">
+            <input class = "markallControler" type="checkbox" name="tipo" id="vazio"  @click = "markall"></td>
         <td></td>
     </tr>
     <tr class = "tabela-vazia">
-        <td class = "input markall"> <input v-model="oportunidade" type="checkbox" name="RPA" id="RPA"> </td>
+        <td class = "input"> 
+            <input class= "markall" type="checkbox" name="RPA" id="RPA"> </td>
         <td><h3> RPA </h3></td>
     </tr>
     <tr class = "tabela-vazia">
-        <td class = "input markall"><input v-model="oportunidade" type="checkbox" name="RPA" id="Produto"></td>
+        <td class = "input">
+            <input class= "markall" type="checkbox" name="RPA" id="Produto"></td>
         <td><h3> Produto Digital </h3></td>
     </tr>
     <tr class = "tabela-vazia">
-        <td class = "input markall"><input v-model="oportunidade" type="checkbox" name="RPA" id="Analytics"></td>
+        <td class = "input">
+            <input class= "markall" type="checkbox" name="RPA" id="Analytics"></td>
         <td><h3> Analytics </h3></td>
     </tr>
     <tr class = "tabela-vazia">
-        <td class = "input markall"><input v-model="oportunidade" type="checkbox" name="RPA" id="BPM"></td>
+        <td class = "input">
+            <input class= "markall" type="checkbox" name="RPA" id="BPM"></td>
         <td><h3> BPM </h3></td>
     </tr>
 
@@ -29,18 +34,15 @@
 </template>
 
 <script>
-
+import markall from '@/controllers/MarkallCheckbox'
 
 export default {
     methods:{
-        markall: function(){
-            let markArray = document.querySelectorAll('.markall')
-            let markall = document.querySelector('.markallControler')
-    
-            Array.from(markArray).forEach((checkbox)=>{
-                checkbox.checked = markall.checked
-                
-            })
+        markall
+    },
+    data(){
+        return{
+            oportunidade: ''
         }
     }
 }
