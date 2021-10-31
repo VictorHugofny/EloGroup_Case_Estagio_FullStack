@@ -13,25 +13,30 @@ export default function(){
         let canLogin = this.nome && this.telefone && this.email && pelomenosUm
         
         
-        if (canLogin){       
+        if(canLogin){       
+            let lead = {
+                nome: this.nome,
+                telefone: this.telefone,
+                email: this.email,
+                estado: ['1','',''],
+                estadoNumero: 0,
+                oportunidades: []
+            }
             
-            
+            checkboxArray.forEach((elemento)=>{
+                console.log(elemento.parentNode)
+                if(elemento.checked){
+                    let oportunidade = elemento.parentNode.parentNode.children[1].children[0].innerHTML
+                    lead.oportunidades.push(oportunidade)
+                }
+            })
 
-            
-          let lead = {
-              nome: this.nome,
-              telefone: this.telefone,
-              email: this.email,
-              estado: ['1','',''],
-              estadoNumero: 0,
-              oportunidades: []
-          }
-          window.usuarioLogado.leads.push(lead)
-          let bancoDeDados = JSON.parse(localStorage.bancoDeDados);
-          let usuario = bancoDeDados.usuarios.find(user => user.nome == window.usuarioLogado.nome);
-          usuario.leads = window.usuarioLogado.leads
-          localStorage.bancoDeDados = JSON.stringify(bancoDeDados)
-          router.push("LeadCreate");
+            window.usuarioLogado.leads.push(lead)
+            let bancoDeDados = JSON.parse(localStorage.bancoDeDados);
+            let usuario = bancoDeDados.usuarios.find(user => user.nome == window.usuarioLogado.nome);
+            usuario.leads = window.usuarioLogado.leads
+            localStorage.bancoDeDados = JSON.stringify(bancoDeDados)
+            router.push("LeadCreate");
         }
 
         else{
