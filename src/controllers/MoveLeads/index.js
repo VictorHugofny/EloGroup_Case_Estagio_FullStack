@@ -11,9 +11,9 @@ export default function(event){
     let lead = window.usuarioLogado.leads.find(ld => ld.nome == leadSelecionada.innerHTML)
 
     let estados = [
-        ['1', '', ''],
-        ['', '1', ''],
-        ['', '', '1'] 
+        ['Cliente em Portencial', '', ''],
+        ['', 'Dados Confirmados	', ''],
+        ['', '', 'Reunião Agendada'] 
     ]
 
     if (lead.estadoNumero < 3) lead.estadoNumero++

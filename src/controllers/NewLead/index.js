@@ -16,7 +16,7 @@ export default function(){
             nome: this.nome,
             telefone: this.telefone,
             email: this.email,
-            estado: ['1','',''],
+            estado: ['Cliente em potencial','',''],
             estadoNumero: 0,
             oportunidades: []
         }
