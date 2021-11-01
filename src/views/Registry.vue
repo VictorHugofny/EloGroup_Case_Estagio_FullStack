@@ -1,7 +1,7 @@
 <template>
     <div class = "login"> 
     <Header/>
-    <FailedLogin :text='BoxText' v-show="fail"/>
+    <FailedLogin :texto='textoFalha' v-show="fail"/>
 
     <div class="floatTextInput">
         <span>Usuário * </span>
@@ -40,7 +40,7 @@ export default {
     return {
       textoRegistro: 'Registrar',
       textologin: 'Login',
-      BoxText: 'Usuario ja existe ou Senha não esta formatada corretamente',
+      textoFalha: 'Usuario ja existe ou Senha não esta formatada corretamente',
       fail : false,
       Sucess: false,
       id:'',

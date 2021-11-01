@@ -2,7 +2,7 @@
     <div class = "login"> 
     
     <Header/>
-    <FailedLogin :text='BoxText'  v-show="fail"/>
+    <FailedLogin :texto='texto'  v-show="fail"/>
 
     <div class="floatTextInput">
         <span>Usuário * </span>
@@ -14,7 +14,7 @@
     <Button @click = 'Login' :texto='textologin'/>
     
     <router-link to="/">
-    <Button :texto='textoRegistro'/>
+      <Button :texto='textoRegistro'/>
     </router-link>
 
   </div>
@@ -36,7 +36,7 @@ export default {
 
    data(){
     return {
-      BoxText: 'Usuario não existe ou Senha incorreta',
+      texto: 'Usuario não existe ou Senha incorreta',
       textoRegistro: 'Registrar',
       textologin: 'Login',
       fail : false,
@@ -44,7 +44,6 @@ export default {
       Sucess: false,
       id:'',
       senha: '',
-      senhaConfirmada:'',
     }
 },
 

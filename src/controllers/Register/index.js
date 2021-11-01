@@ -29,10 +29,11 @@ export default function (){
       }
     }
     else{
+      this.textoFalha = "As senhas precisam ser iguais e ter no minino 8 caracteres, com letra maiúscula, digito e caracter especial"
       this.fail = true
     }
   }else{
-    this.BoxText = "Preencha os campos obrigatórios"
+    this.textoFalha = "Preencha os campos obrigatórios"
     this.fail = true
   }
 }

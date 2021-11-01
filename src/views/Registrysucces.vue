@@ -1,6 +1,6 @@
 <template>
     <router-link to="/leads">
-      <SucessLogin :text='texto' />
+      <SucessLogin :texto='texto' />
     </router-link>
 </template>
 

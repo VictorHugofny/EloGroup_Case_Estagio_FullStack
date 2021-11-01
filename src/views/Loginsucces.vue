@@ -1,17 +1,17 @@
 <template>
     <router-link to="/leads">
-      <SucessLogin :text='texto' />
+      <SucessLogin :texto='texto' />
     </router-link>
 </template>
 
 <script>
 import SucessLogin from '@/components/SucessLogin.vue'
 
-
 export default {
   components: {
     SucessLogin,
-  },data(){
+  },
+  data(){
     return{
       texto:'Login feito com sucesso'
     }

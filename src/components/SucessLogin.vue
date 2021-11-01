@@ -1,12 +1,12 @@
 <template>
-    <h1>{{text}}</h1>
+    <h1>{{texto}}</h1>
     <button>Clique aqui para continuar</button>
 </template>
 
 <script>
 export default {
     props:{
-        text: {
+        texto: {
             type: String,
             default: () => "Botão"
         }

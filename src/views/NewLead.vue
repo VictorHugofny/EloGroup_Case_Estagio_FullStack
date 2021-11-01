@@ -4,7 +4,7 @@
     <Header/>
     <p>Novo Lead</p>
   </div>
-  <ErrorBox v-show = "fail" :text='BoxText' />
+  <ErrorBox v-show = "fail" :texto='texto'/>
   <div class = "InputLead">
     <div class="floatTextInput">
       <span>Nome *</span>
@@ -47,7 +47,7 @@ export default {
         nome : '',
         telefone : '',
         email : '',
-        BoxText: 'Não foi possivel criar lead, revise os campos são obrigatorios'
+        texto: 'Não foi possivel criar lead, revise os campos são obrigatorios'
     }
   }
 }

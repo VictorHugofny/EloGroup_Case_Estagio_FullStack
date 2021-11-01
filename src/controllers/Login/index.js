@@ -14,16 +14,16 @@ export default function (){
         router.push("Loginsucces");
       }
       else{
-        this.BoxText = "Senha incorreta"
+        this.texto = "Senha incorreta"
         this.fail = true
       }
     }
     else{
-      this.BoxText = "Usuario não existe"
+      this.texto = "Usuario não existe"
       this.fail = true
     }
   } else{
-    this.BoxText = "Preencha os campos obrigatórios"
+    this.texto = "Preencha os campos obrigatórios"
     this.fail = true
   }
 }
