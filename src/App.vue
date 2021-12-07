@@ -4,7 +4,6 @@
       <router-link to="/">
         <img class="navLogo" alt="EloGroup logo minimized" src="@/assets/logo_minimized.png">
       </router-link>
- 
     </div>
     <div class="appContainer">
       <router-view/>
@@ -28,11 +27,8 @@ export default {
   --mainColor: rgb(20, 34, 43);
   --containersBackground: white;
   --darkerContrastColor: rgb(187, 187, 187); 
-
   --errorColor: red;
-
   --transitionTime: .15s;
-
   --tableHeaderBackgorund: rgb(158, 158, 158);
   --tableHeaderColor: var(--containersBackground);
   --tableRowColorBackground: var(--containersBackground);
