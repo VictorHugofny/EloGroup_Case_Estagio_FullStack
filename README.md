@@ -12,6 +12,9 @@
   <img alt="web" src="src/assets/leads1.gif" width="100%">
 </p>
 
+### Download Project (Baixar projeto)
+[Clique aqui para baixar o repositorio](https://github.com/VictorHugofny/EloGroup_Case_Estagio_FullStack/archive/refs/heads/main.zip).
+
 ### Project setup (Configuração do projeto)
 ```
 npm install
@@ -32,5 +35,3 @@ npm run build
 npm run lint
 ```
 
-### Download Project (Baixar projeto)
-[Clique aqui para baixar o repositorio](https://github.com/VictorHugofny/EloGroup_Case_Estagio_FullStack/archive/refs/heads/main.zip).
