@@ -9,7 +9,7 @@
 
 ## Painel de Leads
 <p align="center">
-  <img alt="web" src="src/assets/leads.gif" width="100%">
+  <img alt="web" src="src/assets/Leads.gif" width="100%">
 </p>
 
 ### Project setup (Configuração do projeto)
