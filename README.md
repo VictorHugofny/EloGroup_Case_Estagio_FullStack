@@ -32,5 +32,5 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Download Project (Baixar projeto)
+[Clique aqui para baixar o repositorio](https://github.com/VictorHugofny/EloGroup_Case_Estagio_FullStack/archive/refs/heads/main.zip).
