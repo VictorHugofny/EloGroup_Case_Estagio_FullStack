@@ -2,6 +2,15 @@
 <h6 align="left">🚀 Desafio de estagio na empresa Elogroup.</p>
 <h6 align="left">A aplicação desenvolvida, foi implementada usando Vue.js, será armazenado dados do usuário, para registro e login usando Localstorage, a aplicação tem como objetivo fazer a manutenção de Leads.</p>
 
+## Preview
+<p align="center">
+  <img alt="web" src="src/assets/previa.gif" width="100%">
+</p>
+
+## Painel de Leads
+<p align="center">
+  <img alt="web" src="src/assets/leads.gif" width="100%">
+</p>
 
 ### Project setup (Configuração do projeto)
 ```
