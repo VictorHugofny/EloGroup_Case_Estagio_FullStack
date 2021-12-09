@@ -4,12 +4,12 @@
 
 ## Preview
 <p align="center">
-  <img alt="web" src="src/assets/previa.gif" width="100%">
+  <img alt="web" src="src/assets/previa.gif" width="80%">
 </p>
 
 ## Painel de Leads
 <p align="center">
-  <img alt="web" src="src/assets/leads1.gif" width="100%">
+  <img alt="web" src="src/assets/leads1.gif" width="80%">
 </p>
 
 ### Download Project (Baixar projeto)
